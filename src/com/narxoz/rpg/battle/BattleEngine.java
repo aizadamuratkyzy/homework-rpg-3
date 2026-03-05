@@ -39,7 +39,7 @@ public final class BattleEngine {
 
         result.addLog("=== ENCOUNTER START ===");
 
-        while (!teamA.isEmpty() || !teamB.isEmpty()) {            rounds++;
+        while (!teamA.isEmpty() && !teamB.isEmpty()) {        rounds++;
             result.addLog("Round " + rounds);
 
             performTeamAttack(teamA, teamB, result);
