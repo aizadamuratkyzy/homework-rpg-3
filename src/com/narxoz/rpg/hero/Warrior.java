@@ -24,11 +24,8 @@ public class Warrior implements Hero {
 
     @Override
     public void receiveDamage(int amount) {
-        // TODO: enforce min 0
-        health -= amount;
-        if (health < 0) {
-            health = 0;
-        }
+        if (amount < 0) return;
+        health = Math.max(0, health - amount);
     }
 
     @Override
@@ -38,5 +35,4 @@ public class Warrior implements Hero {
 
     public int getHealth() {
         return health;
-    }
-}
+    }}
